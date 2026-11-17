@@ -1,0 +1,13 @@
+Lab 9 - Notes and Explanations
+Student Name / Roll Number: [Insert Your Name & ID Here]
+
+Task 3(d) Comparisons and Explanations:
+1. Baseline vs Tuned Mean CV RMSE:
+   - The linear baseline yielded a Mean CV RMSE of approximately 10.20 MPa.
+   - The tuned polynomial Ridge model achieved a much lower Mean CV RMSE of approximately 6.09 MPa because polynomial features capture non-linear relationships.
+
+2. Example of a Degree-2 Interaction Term:
+   - An example of an interaction term in a degree-2 model with features like Cement (x1) and Water (x2) is (x1 * x2), which models how ingredients work together.
+
+3. Why Scaling Belongs Inside the Pipeline:
+   - StandardScaler scales features to mean 0 and variance 1. Putting scaling inside the Pipeline ensures that scaling is dynamically fitted only on training folds during cross-validation, completely preventing data leakage from validation or test sets.
